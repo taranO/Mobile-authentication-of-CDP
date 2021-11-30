@@ -11,11 +11,11 @@ import yaml
 import sys
 sys.path.insert(0,'..')
 
-import libs._yaml_utils as yaml_utils
-from libs._utils import *
+import libs.yaml_utils as yaml_utils
+from libs.utils import *
 
-from libs._ClassifierDataLoader import ClassifierDataLoader
-from libs._ClassificationModel import ClassificationModel
+from libs.ClassifierDataLoader import ClassifierDataLoader
+from libs.ClassificationModel import ClassificationModel
 
 # ======================================================================================================================
 parser = argparse.ArgumentParser(description="TEST: the supervised classification of CDP")
@@ -44,7 +44,6 @@ set_log_config(args.is_debug)
 log.info("PID = %d\n" % os.getpid())
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-
 
 # ======================================================================================================================
 def run():
