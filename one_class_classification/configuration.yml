@@ -20,7 +20,7 @@ models:
     optimizer: "adam"
     lr: 0.0001
     loss: "binary_crossentropy"
-    loss_weight: 1 #0.001
+    loss_weight: 0.001
 
   UnetXUnetT:
     name: UnetXUnetT
@@ -31,7 +31,7 @@ models:
     loss_weight: 25
 
 dataset:
-  dataset_name: PGC_5x5
+  dataset_name: IndigoMobile
   args:
     symbol_size: 5
     templates_path: ../data/binary/
