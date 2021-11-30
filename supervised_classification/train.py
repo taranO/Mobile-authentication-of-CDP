@@ -66,17 +66,9 @@ def train():
 
     # === Training =================================================================================================
     for epoch in range(args.epochs):
-        if epoch <= 10:
-            save_each = 1
-        elif epoch <= 100:
-            save_each = 10
-        elif epoch <= 1000:
-            save_each = 50
-        elif epoch <= 10000:
-            save_each = 100
-
         Loss = []
         batches = 0
+        save_each = saveSpeed(epoch)        
         for x_batch, labels in DataGenTrain.datagen:
             loss = Classifier.train_on_batch(x_batch, labels)
             Loss.append(loss)
