@@ -1,0 +1,42 @@
+checkpoint_dir: checkpoints
+results_dir: results
+
+batchsize: 128
+
+models:
+  classifier:
+    target_size: [330, 330, 3]
+    name: ClassifierSuprevised
+    input_channels: 3
+    conv_filters: [32, 16, 8]
+    dense_filters: [512, 128, 64, 16]
+    layer_normalisation: False
+    n_classes: 5
+    optimizer: "adam"
+    lr: 0.0001
+    loss: "binary_crossentropy"
+
+dataset:
+  dataset_name: PGC_5x5
+  args:
+    symbol_size: 5
+    templates_path: ./data/binary/
+    printed_path: ./data/original/
+    bad_indices: [29, 39, 104, 106, 110, 120, 130, 140, 141, 150, 174, 208, 226, 235, 244, 270, 280, 290, 300]
+    templates_target_size: [330, 330]
+    target_size: [330, 330, 3]
+    synchronize_with_template: False
+    augmentation: True
+    augmentation_args:
+      first_order: ["rotation"]
+      second_order: ["gamma"]
+      rotation_angles: [0, 90, 180, 270]
+      gamma: [0.5, 1.2, 0.1] # [start, end, step]
+      flip: [0, 1] # ["horizontal", "vertical"]
+    train_ratio: 0.4 # 40%
+    val_ratio: 0.1 # 10%
+    test_ration: 0.5 # 50%
+
+
+
+
