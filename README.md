@@ -30,19 +30,19 @@ $ pip install -r requirements.txt
 ```
 #### 2. Train the supervised step
 ```bash 
-$ python ....
+$ python ./supervised_classification/train.py
 ```
 #### 3. Test the supervised step
 ```bash 
-$ python ....
+$ python ./supervised_classification/test.py
 ```
 #### 4. Train the one-class classificaiton step
 ```bash 
-$ python ....
+$ python ./one_class_classification/train_....py
 ```
 #### 5. Test the one-class classificaiton step
 ```bash 
-$ python ....
+$ python ./one_class_classification/test_....py && python ./one_class_classification/oc-svm_....py
 ```
 
 
