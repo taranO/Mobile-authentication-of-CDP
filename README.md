@@ -9,6 +9,19 @@ Protection of physical objects against counterfeiting is an important task for t
 
 ## Dataset
 
+- Industrial printer:
+	- HP Indigo 5500 DS
+	- resolution 812 dpi 	
+- Mobile phone:
+	- iPhone XS
+	- automatic photo shooting settings
+	- under the regular light conditions
+- Hand-crafted fakes:
+	- Fakes #1 white: RICOH MP C307 on the white paper
+	- Fakes #1 gray: RICOH MP C307 on the gray paper
+	- Fakes #2 white: Samsung CLX-6220FX on the white paper
+	- Fakes #2 gray: Samsung CLX-6220FX on the gray paper
+
 ## Usage
 
 #### 1. Install the dependencies
